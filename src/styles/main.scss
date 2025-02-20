@@ -1,5 +1,55 @@
-$bgColor: rgb(78, 170, 172);
+@use 'variaveis';//importando o arquivo "_variaveis.scss"
+@use 'hero'; //importando o arquivo "_hero.scss"
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: $bgColor;
+    background-color: variaveis.$corDeFundo;
+}
+
+//criação dos mixins para texto e títulos
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: variaveis.$corTextoPrincipal;
+}
+
+@mixin title($fontSize: 40px) {
+    @include text($fontSize); //chamando um mixin dentro de outro mixin
+    color: variaveis.$corTextoSecundario;
+}
+
+//criando as classes para os textos e titulos da pagína
+.text--big {
+    @include text(18px);
+}
+
+.text {
+    @include text;
+}
+
+.text--small {
+    @include text(12px);
+}
+
+.link-text {
+    @include text(18px);
+    color: variaveis.$corTextoSecundario;
+    text-decoration: underline
+}
+
+.title--big {
+    @include title(44px);
+}
+
+.title {
+    @include title(40px);
+}
+
+.title--small {
+    @include title(28px);
 }
