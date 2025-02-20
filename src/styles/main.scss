@@ -1,6 +1,19 @@
 @use 'variaveis';//importando o arquivo "_variaveis.scss"
 @use 'hero'; //importando o arquivo "_hero.scss"
 
+//usar uma font customizada (que não tem google-fonts)
+@font-face {
+    font-family: Avenir; //nomeando a font
+    src: url(../../assests/fonts/Avenir-Regular.woff2); //importando o arquivo
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir; //nomeando a font
+    src: url(../../assests/fonts/Avenir-Bold.woff2); //importando o arquivo
+    font-weight: 700;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +22,7 @@
 
 body {
     background-color: variaveis.$corDeFundo;
+    font-family: Avenir, sans-serif;
 }
 
 //criação dos mixins para texto e títulos
