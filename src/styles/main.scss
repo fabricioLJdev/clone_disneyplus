@@ -1,5 +1,6 @@
 @use 'variaveis';//importando o arquivo "_variaveis.scss"
 @use 'hero'; //importando o arquivo "_hero.scss"
+@use 'shows';
 
 //usar uma font customizada (que não tem google-fonts)
 @font-face {
@@ -18,11 +19,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Avenir, sans-serif;
 }
 
 body {
     background-color: variaveis.$corDeFundo;
-    font-family: Avenir, sans-serif;
 }
 
 //criação dos mixins para texto e títulos
